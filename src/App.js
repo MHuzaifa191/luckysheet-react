@@ -1,13 +1,16 @@
 import React from 'react';
 import './App.css';
-import Luckysheet from './component/Luckysheet'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import Luckysheet from './component/Luckysheet';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-          <Luckysheet/>
-      </header>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Luckysheet} />
+        </Switch>
+      </Router>
     </div>
   );
 }
